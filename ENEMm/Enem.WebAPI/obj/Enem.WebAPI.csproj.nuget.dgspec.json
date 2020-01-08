@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\node\\EnemCaminhando\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj": {}
+    "C:\\Users\\grsilva1\\ProjetosCurso\\Enem2019\\TESTE\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\node\\EnemCaminhando\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj": {
+    "C:\\Users\\grsilva1\\ProjetosCurso\\Enem2019\\TESTE\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\node\\EnemCaminhando\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\grsilva1\\ProjetosCurso\\Enem2019\\TESTE\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj",
         "projectName": "Enem.WebAPI",
-        "projectPath": "C:\\node\\EnemCaminhando\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\gabrielrigolon\\.nuget\\packages\\",
-        "outputPath": "C:\\node\\EnemCaminhando\\ENEMm\\Enem.WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\grsilva1\\ProjetosCurso\\Enem2019\\TESTE\\ENEMm\\Enem.WebAPI\\Enem.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\grsilva1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grsilva1\\ProjetosCurso\\Enem2019\\TESTE\\ENEMm\\Enem.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gabrielrigolon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\grsilva1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
