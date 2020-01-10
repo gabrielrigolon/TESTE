@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Enem.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CandidatoController : ControllerBase
     {

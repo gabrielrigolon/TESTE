@@ -8,7 +8,7 @@ import { Candidato } from './candidato.model';
 })
 export class CandidatoServiceService {
 
-  private url = 'http://localhost:5000/api/Candidato';
+  private url = 'http://localhost:5000/Candidato';
 
 
 constructor(private http: HttpClient) { }

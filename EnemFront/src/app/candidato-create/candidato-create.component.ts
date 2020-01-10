@@ -2,6 +2,7 @@ import { Candidato } from '../candidato.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CandidatoServiceService } from '../candidatoService.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-candidato-create',
@@ -15,7 +16,8 @@ export class CandidatoCreateComponent implements OnInit {
   submitted = false;
 
   constructor(private candidatoService: CandidatoServiceService,
-    private router: Router) { }
+              private router: Router,
+              private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -28,10 +30,13 @@ export class CandidatoCreateComponent implements OnInit {
   save() {
     this.candidatoService.createCandidato(this.candidato)
       .subscribe(data => {
-        console.log(data),
-          this.candidato = new Candidato();
+        this.toastr.success('Hello world!', 'Toastr fun!');
+        console.log(data);
+        this.candidato = new Candidato();
         this.gotoList();
-      }, error => console.log(error));
+      }, error => {
+        console.log(error);
+      });
 
   }
   onSubmit() {

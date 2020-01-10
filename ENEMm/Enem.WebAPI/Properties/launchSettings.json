@@ -20,7 +20,7 @@
     "Enem.WebAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Candidato",
+      "launchUrl": "Candidato",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

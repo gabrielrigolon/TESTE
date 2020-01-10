@@ -9,6 +9,9 @@ import { CandidatoUpdateComponent } from './candidato-update/candidato-update.co
 import { CandidatoDetailsComponent } from './candidato-details/candidato-details.component';
 import { FormsModule } from '@angular/forms';
 import { CandidatoCalcularComponent } from './candidato-calcular/candidato-calcular.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
    declarations: [
@@ -24,7 +27,11 @@ import { CandidatoCalcularComponent } from './candidato-calcular/candidato-calcu
       BrowserModule,
       AppRoutingModule,
       HttpClientModule,
-      FormsModule
+      FormsModule,
+      BrowserAnimationsModule,
+      ToastrModule.forRoot(),
+      ModalModule.forRoot()
+
    ],
    providers: [],
    bootstrap: [

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Candidato } from '../candidato.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CandidatoServiceService } from '../candidatoService.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-candidato-update',
@@ -10,14 +11,16 @@ import { CandidatoServiceService } from '../candidatoService.service';
 })
 export class CandidatoUpdateComponent implements OnInit {
 
+  modalRef: BsModalRef;
   id: number;
-  candidato: Candidato;
+  candidato: Candidato = new Candidato();
 
   constructor(private route: ActivatedRoute, private router: Router,
-              private candidatoService: CandidatoServiceService) { }
+              private candidatoService: CandidatoServiceService,
+              private modalService: BsModalService) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params.id;
     this.candidatoService.get(this.id)
       .subscribe(data => {
         console.log(data);
@@ -25,7 +28,7 @@ export class CandidatoUpdateComponent implements OnInit {
       }, error => console.log(error));
   }
 
-  updateCandidato() {
+  public updateCandidato(): void {
     this.candidatoService.updateCandidato(this.id, this.candidato)
       .subscribe(data => {
         console.log(data);
@@ -35,10 +38,19 @@ export class CandidatoUpdateComponent implements OnInit {
   }
 
   onSubmit() {
+    this.modalRef.hide();
     this.updateCandidato();
   }
 
   gotoList() {
     this.router.navigate(['/candidatos']);
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+  }
+
+  decline(): void {
+    this.modalRef.hide();
   }
 }
