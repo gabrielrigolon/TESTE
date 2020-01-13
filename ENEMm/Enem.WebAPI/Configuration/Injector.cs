@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Enem.WebAPI.FluentValidation;
+using Enem.WebAPI.Models;
+using FluentValidation;
 
 namespace Enem.WebAPI.Configuration
 {
@@ -20,6 +23,8 @@ namespace Enem.WebAPI.Configuration
 
             // repositories
             services.AddScoped<ICandidatoRepository, CandidatoRepository>();
+
+            services.AddTransient<IValidator<Candidato>, CandidatoValidator>();
         }
     }
 }

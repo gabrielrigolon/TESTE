@@ -626,10 +626,14 @@ C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netco
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.csprojAssemblyReference.cache
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\Enem.WebAPI.StaticWebAssets.Manifest.cache
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\staticwebassets\Enem.WebAPI.StaticWebAssets.xml
-C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.AssemblyInfoInputs.cache
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.AssemblyInfo.cs
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.csproj.CopyComplete
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.dll
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.pdb
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\FluentValidation.dll
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\FluentValidation.AspNetCore.dll
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.MvcApplicationPartsAssemblyInfo.cache

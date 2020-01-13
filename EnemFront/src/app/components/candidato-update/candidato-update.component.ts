@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Candidato } from '../candidato.model';
+import { Candidato } from '../../candidato.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CandidatoServiceService } from '../candidatoService.service';
+import { CandidatoServiceService } from '../../services/candidatoService.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -15,7 +15,8 @@ export class CandidatoUpdateComponent implements OnInit {
   id: number;
   candidato: Candidato = new Candidato();
 
-  constructor(private route: ActivatedRoute, private router: Router,
+  constructor(private route: ActivatedRoute, 
+    private router: Router,
               private candidatoService: CandidatoServiceService,
               private modalService: BsModalService) { }
 

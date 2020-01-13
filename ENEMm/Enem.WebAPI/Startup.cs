@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Enem.WebAPI.Configuration;
 using Enem.WebAPI.Data;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +34,7 @@ namespace Enem.WebAPI
             services.AddControllers();
             services.AddCors();
             services.RegisterServices();
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

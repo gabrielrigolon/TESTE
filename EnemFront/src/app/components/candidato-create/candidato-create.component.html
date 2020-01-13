@@ -1,6 +1,6 @@
 <div class="form-create">
   <h3>Criar Candidato</h3>
-  <div [hidden]="submitted" style="width: 400px;">
+  <div>
 
     <form (ngSubmit)="onSubmit()">
 
@@ -28,7 +28,10 @@
           <label for="Campo Obrigatório" class="write-required">* Campos Obrigatórios</label>
         </div>
 
-        <button type="submit" class="btn btn-success">Gravar</button>
+        <div [hidden]="submitted">
+          <button type="submit" class="btn btn-success">Gravar</button>
+        </div>
+        
       </div>
     </form>
   </div>
