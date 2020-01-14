@@ -3,11 +3,11 @@ import { CandidatoServiceService } from '../../services/candidatoService.service
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-candidato-calcular',
-  templateUrl: './candidato-calcular.component.html',
-  styleUrls: ['./candidato-calcular.component.css']
+  selector: 'app-candidato-calculate',
+  templateUrl: './candidato-calculate.component.html',
+  styleUrls: ['./candidato-calculate.component.css']
 })
-export class CandidatoCalcularComponent implements OnInit {
+export class CandidatoCalculateComponent implements OnInit {
 
   numVagas: any;
 
@@ -19,7 +19,7 @@ export class CandidatoCalcularComponent implements OnInit {
   ngOnInit() {
   }
 
-  exibirResultados() {
+  public exibirResultados(): void {
     this.candidatoService.exibirResultados(this.numVagas).subscribe(data => {
       console.log(data);
       this.router.navigate(['candidato']);
@@ -28,7 +28,7 @@ export class CandidatoCalcularComponent implements OnInit {
     });
   }
 
-  cancel() {
+  public cancel(): void {
     this.router.navigate(['candidato']);
   }
 }

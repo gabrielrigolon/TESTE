@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'add', loadChildren: './components/candidato-create/candidato-create.component.module#CandidatoCreateModule'},
   { path: 'update/:id', loadChildren: './components/candidato-update/candidato-update.component.module#CandidatoUpdateModule'},
   { path: 'details/:id', loadChildren: './components/candidato-details/candidato-details.component.module#CandidatoDetailsModule'},
-  { path: 'exibirResultados', loadChildren: './components/candidato-calcular/candidato-calcular.component.module#CandidatoCalcularModule'}
+  { path: 'exibirResultados', loadChildren: './components/candidato-calculate/candidato-calculate.component.module#CandidatoCalculateModule'}
 ];
 
 @NgModule({

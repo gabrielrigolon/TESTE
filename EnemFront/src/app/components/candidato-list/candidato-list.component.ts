@@ -24,13 +24,13 @@ export class CandidatoListComponent implements OnInit {
     this.reloadData();
   }
 
-  reloadData() {
+  public reloadData(): void {
     this.candidatoService.getUsers().subscribe(response => {
       this.responseUsers = response;
     });
   }
 
-  deleteCandidato(id: number) {
+  public deleteCandidato(id: number): void {
     this.candidatoService.deleteCandidato(id).subscribe(
       data => {
         console.log(data);
@@ -41,28 +41,26 @@ export class CandidatoListComponent implements OnInit {
     );
   }
 
-  get(id: number) {
+  public get(id: number): void {
     this.router.navigate(["details", id]);
   }
 
-  detailsCandidato(id: number) {
+  public detailsCandidato(id: number): void {
     this.router.navigate(["details", id]);
   }
 
-  updateCandidato(id: number) {
+  public updateCandidato(id: number): void {
     this.router.navigate(["update", id]);
   }
  
  
-  gotoList() {
-    this.router.navigate(['/candidatos']);
-  }
 
-  openModal(template: TemplateRef<any>) {
+
+  public openModal(template: TemplateRef<any>): void {
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
-  decline(): void {
+  public decline(): void {
     this.modalRef.hide();
   }
 

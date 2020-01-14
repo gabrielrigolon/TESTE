@@ -5,7 +5,7 @@
     <form (ngSubmit)="onSubmit()">
 
       <div class="container-fluid">
-
+        
         <div class="form-group">
           <label class="required" for="name">Nome</label>
           <input type="text" class="form-control" id="nome" required [(ngModel)]="candidato.nome" name="Nome" />
@@ -40,4 +40,4 @@
 <div [hidden]="!submitted">
   <h4>Feito com sucesso!</h4>
   <!-- <button class="btn btn-success" (click)="newCandidato()">Add</button> -->
-</div>
+</div>  

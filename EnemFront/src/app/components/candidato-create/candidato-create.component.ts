@@ -31,8 +31,7 @@ export class CandidatoCreateComponent implements OnInit {
     if (!isNullOrUndefined(this.candidato.nota)) {
       this.candidatoService.createCandidato(this.candidato).subscribe(
         data => {
-          this.toastr.success("Sucesso!");
-          console.log(data);
+          this.toastr.success("Candidato cadastrado!", "Sucesso!");
           this.candidato = new Candidato();
           this.gotoList();
           this.submitted = true;
@@ -42,7 +41,6 @@ export class CandidatoCreateComponent implements OnInit {
           error.error.errors
             ? Object.values(error.error.errors).forEach(fieldErrors => {
                 const errors = fieldErrors as Array<string>;
-                // tslint:disable-next-line: no-shadowed-variable
                 errors.forEach(error => {
                   this.toastr.error(error);
                 });

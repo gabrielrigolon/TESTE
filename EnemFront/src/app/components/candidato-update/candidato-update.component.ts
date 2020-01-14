@@ -3,6 +3,8 @@ import { Candidato } from '../../candidato.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CandidatoServiceService } from '../../services/candidatoService.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-candidato-update',
@@ -18,7 +20,9 @@ export class CandidatoUpdateComponent implements OnInit {
   constructor(private route: ActivatedRoute, 
     private router: Router,
               private candidatoService: CandidatoServiceService,
-              private modalService: BsModalService) { }
+              private modalService: BsModalService,
+              private toastr: ToastrService
+              ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params.id;
@@ -30,14 +34,29 @@ export class CandidatoUpdateComponent implements OnInit {
   }
 
   public updateCandidato(): void {
+    if (!isNullOrUndefined(this.candidato.nota)) {
     this.candidatoService.updateCandidato(this.id, this.candidato)
       .subscribe(data => {
-        console.log(data);
+        this.toastr.success("Candidato Atualizado!", "Sucesso!");
         this.candidato = new Candidato();
         this.gotoList();
-      }, error => console.log(error));
+      }, 
+      error => {
+        error.error.errors
+          ? Object.values(error.error.errors).forEach(fieldErrors => {
+              const errors = fieldErrors as Array<string>;
+              errors.forEach(error => {
+                this.toastr.error(error);
+              });
+            })
+          : this.toastr.warning(error.error);
+      }
+    );
+  } else {
+    this.toastr.error("A nota não foi preenchida");
+    this.candidato.nota = 0;
   }
-
+}
   onSubmit() {
     this.modalRef.hide();
     this.updateCandidato();

@@ -20,13 +20,13 @@
           <td>{{candidato.nome}}</td>
           <td>{{candidato.cidade}}</td>
           <td>{{candidato.nota}}</td>
-          <td>{{candidato.status == true ? "Aprovado" : "Reprovado"}}</td>
+          <td>{{candidato.status ? "Aprovado" : "Reprovado"}}</td>
           <td>
 
-            <button (click)="detailsCandidato(candidato.id)" class="btn btn-info">Detalhes</button>
-            <button (click)="updateCandidato(candidato.id)" class="btn btn-warning m-2"><i
-                class="fas fa-pen"></i></button>
-            <button (click)="openModal(template)" class="btn btn-danger">Deletar</button>
+            <button (click)="detailsCandidato(candidato.id)" class="btn btn-info"><i class="fas fa-info"></i></button>
+            <button (click)="updateCandidato(candidato.id)" class="btn btn-warning"><i
+                class="fas fa-user-edit"></i></button>
+            <button (click)="openModal(template)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
           </td>
 
           <ng-template #template>
