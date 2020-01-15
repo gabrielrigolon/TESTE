@@ -42,7 +42,7 @@ namespace Enem.WebAPI.Repositories
         {
             var candidato = _dbcontext.Candidatos.FirstOrDefault(x => x.Id == idCandidato);
             if (candidato == null)
-                return;
+                return ;
             _dbcontext.Candidatos.Remove(candidato);
             _dbcontext.SaveChanges();
         }

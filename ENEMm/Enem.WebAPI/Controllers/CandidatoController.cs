@@ -72,7 +72,8 @@ namespace Enem.WebAPI.Controllers
         {
             try
             {
-                return Ok(_candidatoService.UpdateCandidato(candidato));
+                _candidatoService.UpdateCandidato(candidato);
+                return Ok(new { Success = true, Message = "Candidato Atualizado com sucesso!" });
             }
             catch (Exception e)
             {
@@ -103,7 +104,7 @@ namespace Enem.WebAPI.Controllers
             try
             {
                 _candidatoService.DeleteCandidato(idCandidato);
-                return Ok(new {Sucess = true, Message = "Deletado com sucesso"});
+                return Ok(new { Sucess = true, Message = "Deletado com sucesso" });
             }
             catch (Exception exception)
             {

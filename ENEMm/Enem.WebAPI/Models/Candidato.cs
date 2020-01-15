@@ -20,5 +20,7 @@ namespace Enem.WebAPI.Models
         }
 
         public bool Status { get; set; }
+
+        public virtual ICollection<Concurso> Concursos { get; set; }
     }
 }

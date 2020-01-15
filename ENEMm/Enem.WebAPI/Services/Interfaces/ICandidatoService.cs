@@ -12,7 +12,7 @@ namespace Enem.WebAPI.Services
         Candidato GetCandidato(int idCandidato);
         Candidato CreateCandidato(Candidato candidato);
         void DeleteCandidato(int idCandidato);
-        Candidato UpdateCandidato(Candidato candidato);
+        void UpdateCandidato(Candidato candidato);
         void RecalcularVagas(int vagas);
 
     }

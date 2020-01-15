@@ -28,6 +28,9 @@ namespace Enem.WebAPI.Data
 
             builder.Property(x => x.Status)
             .HasDefaultValue(false);
+
+            //builder.Property(x => x.Concursos)
+            //    .HasDefaultValue(false).IsRequired(false);
         }
     }
 }

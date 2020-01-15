@@ -1,13 +1,24 @@
-.container-fluid{
-    text-align: -webkit-center !important;
+h3 {
+    text-align: center;
 }
 
-.form-create {
-    text-align: -webkit-center !important;
+.containeer-fluid {
+    height: auto;
+    box-align: center;
+    text-align: -webkit-center;
 }
+
 
 .form-group {
     text-align: left !important;
+    max-width: 50vw;
+    box-align: center;
+}
+
+.form-control {
+    text-align: left !important;
+    max-width: 50vw;
+   
 }
 
 .required:after {
@@ -18,3 +29,4 @@
 .write-required {
     color: red;
 }
+

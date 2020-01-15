@@ -17,14 +17,14 @@ namespace Enem.WebAPI.FluentValidation
 
             RuleFor(c => c.Nome)
                 .NotEmpty().WithMessage("O nome é obrigatório")
-                .Matches(@"^[a-zA-z\s]{1,40}$")
+                .Matches(@"^[a-zA-z\u00C0-\u00FF\s]{1,40}$")
                 .WithMessage("O nome não pode conter número e/ou caracteres especiais")
                 .Must(c => !c.Contains("  ")).WithMessage("O nome não pode conter dois espaços seguidos")
                 .Must(c => !c.StartsWith(' ')).WithMessage("O nome não pode começar com espaço");
 
             RuleFor(c => c.Cidade)
                 .NotEmpty().WithMessage("O nome da cidade é obrigatório")
-                .Matches(@"^[a-zA-z\s]{1,40}$")
+                .Matches(@"^[a-zA-z\u00C0-\u00FF\s]{1,40}$")
                 .WithMessage("O nome da cidade não pode conter número e/ou caracteres especiais")
                 .Must(c => !c.Contains("  ")).WithMessage("O nome não pode conter dois espaços seguidos")
                 .Must(c => !c.StartsWith(' ')).WithMessage("O nome da cidade não pode começar com espaço");

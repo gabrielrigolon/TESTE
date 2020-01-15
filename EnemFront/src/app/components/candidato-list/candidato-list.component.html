@@ -23,17 +23,17 @@
           <td>{{candidato.status ? "Aprovado" : "Reprovado"}}</td>
           <td>
 
-            <button (click)="detailsCandidato(candidato.id)" class="btn btn-info"><i class="fas fa-info"></i></button>
-            <button (click)="updateCandidato(candidato.id)" class="btn btn-warning"><i
+            <button (click)="detailsCandidato(candidato.id)" class="btn btn-info" id="btn-action"><i class="fas fa-info"></i></button>
+            <button (click)="updateCandidato(candidato.id)" class="btn btn-warning" id="btn-action"><i
                 class="fas fa-user-edit"></i></button>
-            <button (click)="openModal(template)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+            <button (click)="openModal(template)" class="btn btn-danger" id="btn-action"><i class="fas fa-trash-alt"></i></button>
           </td>
 
           <ng-template #template>
             <div class="modal-body text-center">
               <p>Do you want to confirm?</p>
-              <button type="button" class="btn btn-default" (click)="deleteCandidato(candidato.id)">Yes</button>
-              <button type="button" class="btn btn-primary" (click)="decline()">No</button>
+              <button type="button" class="btn btn-default"  (click)="deleteCandidato(candidato.id)">Yes</button>
+              <button type="button" class="btn btn-primary" id="btn-modal" (click)="decline()">No</button>
             </div>
           </ng-template>
         </tr>

@@ -5,7 +5,7 @@ td {
     text-align: center;
 }
 
-.btn {
+#btn-action {
     margin: 5px;
     align-items: center;
     width: 39px;
@@ -14,8 +14,8 @@ td {
     color: white
 }
 
-.btn:hover {
-    color: #000000;
+#btn-action:hover {
+    color: black;
     background-color: silver;
     border-color: silver;
 }

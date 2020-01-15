@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Enem.WebAPI.Data.Mappings;
 
 namespace Enem.WebAPI.Data
 {
@@ -13,5 +14,13 @@ namespace Enem.WebAPI.Data
 
         public DbSet<Value> Values { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
+        public DbSet<Concurso> Concursos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CandidatoMap());
+            modelBuilder.ApplyConfiguration(new ConcursoMap());
+            //modelBuilder.ApplyConfiguration(new CandidatoConcursoMap());
+        }
     }
 }

@@ -5,3 +5,9 @@ tr {
 th {
     align-content: center;
 }
+
+footer {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+}

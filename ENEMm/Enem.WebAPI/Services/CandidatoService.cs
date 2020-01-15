@@ -29,7 +29,7 @@ namespace Enem.WebAPI.Services
                 if (candidato.Nota >= 0 && candidato.Nota <= 100
                     && !candidato.Nome.Any(char.IsDigit) && !candidato.Cidade.Any(char.IsDigit))
                 {
-                    var candidatoDb = _candidatoRepository.UpdateCandidato(candidato);
+                    var candidatoDb = _candidatoRepository.CreateCandidato(candidato);
 
                     return candidatoDb;
                 }
@@ -49,20 +49,14 @@ namespace Enem.WebAPI.Services
             _candidatoRepository.DeleteCandidato(idCandidato);
         }
 
-        public Candidato UpdateCandidato(Candidato candidato)
+        public void UpdateCandidato(Candidato candidato)
         {
 
-            if (candidato != null)
+            if (candidato.Nota >= 0 && candidato.Nota <= 100
+                                    && !candidato.Nome.Any(char.IsDigit) && !candidato.Cidade.Any(char.IsDigit))
             {
-                if (candidato.Nota >= 0 && candidato.Nota <= 100
-                    && !candidato.Nome.Any(char.IsDigit) && !candidato.Cidade.Any(char.IsDigit))
-                {
-                    var candidatoDb = _candidatoRepository.UpdateCandidato(candidato);
-
-                    return candidatoDb;
-                }
+                _candidatoRepository.UpdateCandidato(candidato);
             }
-            return null;
         }
 
         private void UpdateCandidatos(IEnumerable<Candidato> candidatos)
