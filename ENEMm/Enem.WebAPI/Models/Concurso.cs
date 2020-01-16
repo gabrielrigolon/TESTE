@@ -10,6 +10,6 @@ namespace Enem.WebAPI.Models
         public int Id { get; set; }
         public string Descricao { get; set; }
 
-        public virtual ICollection<Candidato> Candidatos { get; set; }
+        public virtual ICollection<CandidatoConcurso> CandidatoConcursos { get; set; }
     }
 }

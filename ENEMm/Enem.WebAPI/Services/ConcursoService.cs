@@ -19,7 +19,7 @@ namespace Enem.WebAPI.Services
         public IEnumerable<Concurso> GetConcursos()
         {
             var concursos = _concursoRepository.GetConcursos().ToList();
-            return concursos.OrderByDescending(x => x.Descricao);
+            return concursos.OrderByDescending(x => x.Id);
         }
 
         public Concurso CreateConcurso(Concurso concurso)

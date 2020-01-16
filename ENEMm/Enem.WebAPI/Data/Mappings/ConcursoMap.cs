@@ -19,19 +19,6 @@ namespace Enem.WebAPI.Data.Mappings
 
             builder.Property(x => x.Descricao)
                 .IsRequired();
-
-            builder.Property(x => x.Candidatos)
-                .HasDefaultValue(false).IsRequired(false);
-
-            //builder.Entity<ContactCategory>()
-            //    .HasOne(x => x.Category)
-            //    .WithMany(x => x.ContactCategories)
-            //    .HasForeignKey(x => x.CategoryId);
-
-            //modelBuilder.Entity<ContactCategory>()
-            //    .HasOne(x => x.Contact)
-            //    .WithMany(x => x.ContactCategories)
-            //    .HasForeignKey(x => x.ContactId);
         }
     }
 }

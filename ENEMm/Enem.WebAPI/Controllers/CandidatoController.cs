@@ -38,7 +38,7 @@ namespace Enem.WebAPI.Controllers
 
 
         // GET: api/Candidato/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetCandidato")]
         public IActionResult Get(int id)
         {
             try

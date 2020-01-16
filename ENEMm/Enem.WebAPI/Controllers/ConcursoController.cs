@@ -35,7 +35,7 @@ namespace Enem.WebAPI.Controllers
         }
 
         // GET: api/Concurso/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetConcursos")]
         public IActionResult Get(int id)
         {
             try
@@ -82,7 +82,7 @@ namespace Enem.WebAPI.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteCandidatos(int idConcurso)
+        public IActionResult DeleteConcurso(int idConcurso)
         {
             try
             {

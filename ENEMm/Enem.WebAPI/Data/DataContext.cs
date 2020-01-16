@@ -12,15 +12,17 @@ namespace Enem.WebAPI.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DbSet<Value> Values { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
         public DbSet<Concurso> Concursos { get; set; }
+        public DbSet<CandidatoConcurso> CandidatoConcursos{ get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CandidatoMap());
             modelBuilder.ApplyConfiguration(new ConcursoMap());
-            //modelBuilder.ApplyConfiguration(new CandidatoConcursoMap());
+            modelBuilder.ApplyConfiguration(new CandidatoConcursoMap());
+
         }
     }
 }

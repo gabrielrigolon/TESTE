@@ -83,5 +83,10 @@ namespace Enem.WebAPI.Services
 
             UpdateCandidatos(candidatos);
         }
+
+        public void IncludeConcursoOnCandidato()
+        {
+            
+        }
     }
 }
