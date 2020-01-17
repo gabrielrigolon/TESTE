@@ -15,12 +15,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let candidato of responseUsers let i = index" [attr.data-index]="i">
+        <tr *ngFor="let candidato of candidatos let i = index" [attr.data-index]="i">
           <td>{{i+1}}</td>
           <td>{{candidato.nome}}</td>
           <td>{{candidato.cidade}}</td>
           <td>{{candidato.nota}}</td>
-          <td>{{candidato.status ? "Aprovado" : "Reprovado"}}</td>
+          <td><b>{{candidato.status ? "Aprovado" : "Reprovado"}}</b></td>
           <td>
 
             <button (click)="detailsCandidato(candidato.id)" class="btn btn-info" id="btn-action"><i class="fas fa-info"></i></button>

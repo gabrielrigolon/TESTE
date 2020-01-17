@@ -11,7 +11,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ["./candidato-list.component.css"]
 })
 export class CandidatoListComponent implements OnInit {
-  responseUsers: Candidato[] = [];
+  candidatos: Candidato[] = [];
   modalRef: BsModalRef;
 
   constructor(
@@ -26,7 +26,7 @@ export class CandidatoListComponent implements OnInit {
 
   public reloadData(): void {
     this.candidatoService.getUsers().subscribe(response => {
-      this.responseUsers = response;
+      this.candidatos = response;
     });
   }
 

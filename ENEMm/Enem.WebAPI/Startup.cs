@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Enem.WebAPI.Configuration;
 using Enem.WebAPI.Data;
 using FluentValidation.AspNetCore;
@@ -36,6 +37,8 @@ namespace Enem.WebAPI
             services.AddCors();
             services.RegisterServices();
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddSwaggerConfiguration();
         }

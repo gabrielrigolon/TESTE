@@ -644,5 +644,7 @@ C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netco
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\AutoMapper.dll
+C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\grsilva1\ProjetosCurso\Enem2019\TESTE\ENEMm\Enem.WebAPI\obj\Debug\netcoreapp3.0\Enem.WebAPI.MvcApplicationPartsAssemblyInfo.cache

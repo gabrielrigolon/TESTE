@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Enem.WebAPI.Models;
 using Enem.WebAPI.Repositories;
 using Enem.WebAPI.Services;
+using Enem.WebAPI.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +17,12 @@ namespace Enem.WebAPI.Controllers
     public class CandidatoController : ControllerBase
     {
         private readonly ICandidatoService _candidatoService;
+        private readonly IMapper _mapper;
 
-        public CandidatoController(ICandidatoService candidatoService)
+        public CandidatoController(ICandidatoService candidatoService, IMapper mapper)
         {
             _candidatoService = candidatoService;
+            _mapper = mapper;
         }
 
 
@@ -41,9 +45,13 @@ namespace Enem.WebAPI.Controllers
         [HttpGet("{id}", Name = "GetCandidato")]
         public IActionResult Get(int id)
         {
+
             try
             {
-                return Ok(_candidatoService.GetCandidato(id));
+                var candidato = _candidatoService.GetCandidato(id);
+                var candidatoVM = _mapper.Map<CandidatoViewModel>(candidato);
+
+                return Ok(candidatoVM);
             }
             catch (Exception exception)
             {
