@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CandidatoServiceService } from '../../services/candidatoService.service';
+import { CandidatoServiceService } from '../../services/candidato.service';
 import { Router } from '@angular/router';
 
 @Component({

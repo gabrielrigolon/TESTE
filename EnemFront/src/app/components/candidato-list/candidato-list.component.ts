@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from "@angular/core";
 import { Observable } from "rxjs";
-import { CandidatoServiceService } from '../../services/candidatoService.service';
-import { Candidato } from "../../candidato.model";
+import { CandidatoServiceService } from '../../services/candidato.service';
+import { Candidato } from "../../models/candidato.model";
 import { Router } from "@angular/router";
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 

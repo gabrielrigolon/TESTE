@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Candidato } from '../../candidato.model';
+import { Candidato } from '../../models/candidato.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CandidatoServiceService } from '../../services/candidatoService.service';
+import { CandidatoServiceService } from '../../services/candidato.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
 import { isNullOrUndefined } from 'util';
